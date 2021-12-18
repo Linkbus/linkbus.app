@@ -1,14 +1,15 @@
 <template>
   <div id="app">
-    <b-container class="px-0 d-flex flex-column">
-<!--      <b-row class="m-0">-->
-<!--        <b-col>-->
-<!--          <h1 class="m-0 p-3 title">Linkbus</h1>-->
-<!--        </b-col>-->
-<!--      </b-row>-->
+    <b-container class="px-0 d-flex flex-column" style="height: 100vh;">
       <b-row class="m-0">
-        <b-col>
+        <b-col class="p-0" style="background: #ffffff;">
           <Showcase />
+        </b-col>
+      </b-row>
+      <b-row class="m-0" style="flex:1">
+        <b-col class="p-0" style="background: #ffffff; height:100%; z-index: 20">
+<!--          <Screenshots />-->
+
         </b-col>
       </b-row>
     </b-container>
@@ -18,11 +19,12 @@
 <script>
 
   import Showcase from './components/Showcase.vue'
+  // import Screenshots from './components/Screenshots.vue'
 
   export default {
     name: 'App',
     components: {
-      Showcase
+      Showcase // , Screenshots
     }
   }
 </script>
@@ -43,9 +45,10 @@
     background-attachment: fixed;
     background-size: cover;
 
-    background-color: #fff154;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' %3E%3Cdefs%3E%3ClinearGradient id='a' x1='0' x2='0' y1='0' y2='1' gradientTransform='rotate(346,0.5,0.5)'%3E%3Cstop offset='0' stop-color='%23ffffff'/%3E%3Cstop offset='1' stop-color='%2375a1ff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpattern id='b' width='30' height='30' patternUnits='userSpaceOnUse'%3E%3Ccircle fill='%23fff154' cx='15' cy='15' r='15'/%3E%3C/pattern%3E%3Crect width='100%25' height='100%25' fill='url(%23a)'/%3E%3Crect width='100%25' height='100%25' fill='url(%23b)' fill-opacity='0.07'/%3E%3C/svg%3E");
-
+    /*background-color: #fff154;*/
+    /*background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' %3E%3Cdefs%3E%3ClinearGradient id='a' x1='0' x2='0' y1='0' y2='1' gradientTransform='rotate(346,0.5,0.5)'%3E%3Cstop offset='0' stop-color='%23ffffff'/%3E%3Cstop offset='1' stop-color='%e7e7e7;'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpattern id='b' width='30' height='30' patternUnits='userSpaceOnUse'%3E%3Ccircle fill='%23fff154' cx='15' cy='15' r='15'/%3E%3C/pattern%3E%3Crect width='100%25' height='100%25' fill='url(%23a)'/%3E%3Crect width='100%25' height='100%25' fill='url(%23b)' fill-opacity='0.07'/%3E%3C/svg%3E");*/
+    background: rgb(190,33,54);
+    background: linear-gradient(14deg, rgba(190,33,54,1) 0%, rgba(255,255,255,1) 100%);
     overflow: hidden;
 
     font-family: 'Nunito', sans-serif;
